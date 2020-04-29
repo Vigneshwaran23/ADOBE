@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  height: 100vh;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.5fr 1.2fr 1.5fr;
+  grid-template-rows: 1fr 4fr 3fr 1fr;
+  height: 100vh;
+  /*margin: 2em;*/
+}
+.img {
+  width: 100px;
+  height: 50px;
+}
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr;
+  text-align: center;
+}
+button {
+  width: 85px;
+  height: 25px;
+  border-radius: 5px;
+  outline: none;
+  background: rgb(243, 171, 38);
+}
+.slider {
+  -webkit-appearance: none;
+  width: 75%;
+  height: 20px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+header {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+header.logo {
+  grid-area: 1/1/2/2;
+  background: blue;
+}
+header.title {
+  grid-area: 1/2/2/3;
+  background: blue;
+}
+.logo {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.sym {
+  height: 50px;
+  margin-top: 22px;
+}
+.search {
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 17px;
+  border-radius: 2px;
+}
+.icon {
+  width: 50px;
+  height: auto;
+  margin-top: 15px;
+  margin-left: -95px;
+}
+filter.filter {
+  grid-area: 2/1/4/2;
+  background: white;
+  text-align: center;
+}
+section.view {
+  grid-area: 2/2/4/4;
+  background: lightgray;
+}
+footer {
+  grid-area: 4/1/5/4;
+  background: blue;
+  text-align: center;
+  color: white;
+}
+header.search {
+  grid-area: 1/3/2/4;
+  background: blue;
+}
+.input {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  margin-right: 165px;
+  width: 0px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  height: 25px;
+  outline: none;
+  padding: 0 12px;
+  background: blue;
+  transition: all 1s ease;
+  border: 2px solid white;
+}
+::placeholder {
+  color: white;
+}
+.btn {
+  position: absolute;
+  border-radius: 10px;
+  cursor: pointer;
+  top: 19px;
+  right: 165px;
+  text-align: center;
+  transition: all 0.2s ease;
+  background-color: blue;
+}
+.fa-search {
+  color: white;
+}
+.fa-star {
+  color: yellow;
+}
+.fa-shopping-cart {
+  color: white;
+}
+.cart {
+  position: absolute;
+  right: 110px;
+  top: 19px;
+}
+#prodData {
+  width: 200px;
+  text-align: center;
+  position: absolute;
+  width: 300px;
+  border: 3px solid #73ad21;
+  padding: 10px;
+  display: table;
+}
+p {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+.input.active {
+  width: 150px;
+}
