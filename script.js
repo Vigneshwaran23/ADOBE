@@ -2,7 +2,7 @@ $(document).ready(function () {
     $(".btn").click(function () {
         $(".input").toggleClass("active");
     });
-    $.getJSON('https://api.myjson.com/bins/qzuzi', function (data) {
+    $.getJSON('https://api.jsonbin.io/b/5eab07ba4c87c3359a646bf4', function (data) {
         var prodDet = '';
         var arrItems = [];
         arrItems = data;
