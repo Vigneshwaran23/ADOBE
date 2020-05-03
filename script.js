@@ -32,36 +32,33 @@ $(document).ready(function () {
         $("#sortBa").on("click", function () {
             arrItems.sort((a, b) => b.price - a.price);
             console.log(arrItems);
-            data=arrItems;
+            data = arrItems;
             $("p").remove();
             alignData();
         });
         $("#dis").on("click", function () {
             arrItems.sort((a, b) => b.discount - a.discount);
             console.log(arrItems);
-            data=arrItems;
+            data = arrItems;
             $("p").remove();
             alignData();
         });
-        $(function(){
-            // $slider = $('.slider');
-            // $slider.slider('option', 'change').call($slider);
-            $('.slider').on('input change', function(){
-                      $(this).next($('.slider_label')).html(this.value);
-                    });
-                  $('.slider_label').each(function(){
-                      var value = $(this).prev().attr('value');
-                      $(this).html(value);
-                      i=value;
-                    }); 
-                });
-        $("#die").on("click", function () {
-       const highPrice = arrItems.filter(e => e.price > i);
-        console.log(highPrice);
-        data=highPrice;
-        $("p").remove(); 
-        alignData(); 
-        data=[];             
-    });
+        $(function () {
+            $('.slider').on('input change', function () {
+                $(this).next($('.slider_label')).html(this.value);
+            });
+            $('.slider_label').each(function () {
+                var value = $(this).prev().attr('value');
+                $(this).html(value);
+            });
+        });
+        $("#apply").on("click", function () {
+            const highPrice = arrItems.filter(e => e.price > 25);
+            console.log(highPrice);
+            data = highPrice;
+            $("p").remove();
+            alignData();
+            data = [];
+        });
     });
 });

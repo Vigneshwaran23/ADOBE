@@ -27,7 +27,7 @@ button {
   outline: none;
   background: rgb(243, 171, 38);
 }
-.fa-stack-1x{
+.fa-stack-1x {
   position: absolute;
   left: 20px !important;
   margin-top: -7px;
@@ -91,7 +91,7 @@ section.view {
 }
 footer {
   grid-area: 4/1/5/4;
-  background:rgb(116, 116, 216);
+  background: rgb(116, 116, 216);
   text-align: center;
   color: white;
 }
@@ -160,15 +160,15 @@ p {
 }
 @media only screen and (max-device-width: 480px) {
   filter {
-      display: none;
-  }
-  button{
-    /* display: none; */
-  }
-  .title{
     display: none;
   }
-  section.view{
+  button {
+    /* display: none; */
+  }
+  .title {
+    display: none;
+  }
+  section.view {
     grid-area: 2/1/4/4;
   }
 }
