@@ -2,7 +2,7 @@ $(document).ready(function () {
     $(".btn").click(function () {
         $(".input").toggleClass("active");
     });
-    $.getJSON('https://api.jsonbin.io/b/5eab07ba4c87c3359a646bf4', function (data) {
+    $.getJSON('https://api.jsonbin.io/b/5eadd8f172a8c368e29dd10e/4', function (data) {
         var prodDet = '';
         var arrItems = [];
         arrItems = data;
@@ -16,7 +16,7 @@ $(document).ready(function () {
                 prodDet += value.category + '<br>';
                 //prodDet += value.id+'&nbsp';
                 prodDet += '<b>$' + value.price + '</b>&nbsp';
-                prodDet += '&nbsp' + value.discount + '% off <br>';
+                prodDet += '&nbsp<b style="color:green;">' + value.discount + '% off </b><br>';
                 prodDet += '<button class="cartbtn"><a href=""/>Add to Cart</button>';
                 prodDet += '</p>';
             });
@@ -32,15 +32,36 @@ $(document).ready(function () {
         $("#sortBa").on("click", function () {
             arrItems.sort((a, b) => b.price - a.price);
             console.log(arrItems);
+            data=arrItems;
             $("p").remove();
             alignData();
         });
         $("#dis").on("click", function () {
             arrItems.sort((a, b) => b.discount - a.discount);
             console.log(arrItems);
+            data=arrItems;
             $("p").remove();
             alignData();
         });
+        $(function(){
+            // $slider = $('.slider');
+            // $slider.slider('option', 'change').call($slider);
+            $('.slider').on('input change', function(){
+                      $(this).next($('.slider_label')).html(this.value);
+                    });
+                  $('.slider_label').each(function(){
+                      var value = $(this).prev().attr('value');
+                      $(this).html(value);
+                      i=value;
+                    }); 
+                });
+        $("#die").on("click", function () {
+       const highPrice = arrItems.filter(e => e.price > i);
+        console.log(highPrice);
+        data=highPrice;
+        $("p").remove(); 
+        alignData(); 
+        data=[];             
+    });
     });
 });
-

@@ -20,8 +20,8 @@
         </div>
       </header>
       <header class="title">
-        <h1 style="color: white;">Go-Kart</h1>
-        <button id="sortAb" style="background-color:yellow; width: 125px;">
+        <!-- <h1 style="color: white;">Go-Kart</h1> -->
+        <button id="sortAb" style="background-color:yellow; width: 125px; margin-top: 55px;">
           <b> Price - Low High </b>
         </button>
         <button id="sortBa" style="background-color:yellow ; width: 125px;">
@@ -37,12 +37,20 @@
           <i class="fa fa-search fa-2x" aria-hidden="true"></i>
         </div>
         <div class="cart">
-          <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-shopping-cart fa-2x" aria-hidden="true">
+            <strong class="fa-stack-1x" style="font-size:50%; color: red;">
+              23
+          </strong>
+          </i>
         </div>
       </header>
       <filter class="filter">
         <h1>Filter</h1>
-        <input type="range" min="1" max="100" value="50" />
+        <input class="slider" type="range" min="1" max="100" value="" />
+        <span  class="slider_label"></span>
+        <button id="die" style="background-color:blue ; width: 118px;">
+          <b>Apply</b>
+        </button>
       </filter>
       <section class="view"></section>
       <footer>
